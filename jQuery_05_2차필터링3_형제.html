@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CDN방식 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script>
+
+        //DOM Tree가 모두 완료된 후 호출
+        $(document).ready(function(){
+
+            // 가. $(selector1).next() ==> 1차 필터링 후 바로 뒤의 형제요소 반환
+            // 가. $(selector1).next(selector2) ==> 1차 필터링 후 selector2와 일치하는 바로 뒤의 형제요소 반환
+            // $("li").next().css("color","red");
+            // $("li").next(".selected").css("font-size","30px");
+            
+            // 나. $(selector1).nextAll() ==> 1차 필터링 후 바로 뒤 형제들 반환
+            // 나. $(selector1).nextAll(selector2) ==> 1차 필터링 후 selector2와 일치하는 바로 뒤의 형제emf 반환
+            //$("li").nextAll().css("color","red");
+            //$("li").nextAll(".selected").css("font-size","30px");
+
+            // 다. $(selector1).prev() ==> 1차 필터링 후 바로 앞의 형제요소 반환
+            // 다. $(selector1).prev(selector2) ==> 1차 필터링 후 selector2와 일치하는 바로 앞의 형제요소 반환
+            // $("li").prev().css("color","red");
+            // $("li").prev(".selected").css("font-size","30px");
+            
+            // 라. $(selector1).prevAll() ==> 1차 필터링 후 바로 앞의 형제요소들 반환
+            // 라. $(selector1).prevAll(selector2) ==> 1차 필터링 후 selector2와 일치하는 바로 앞의 형제요소들 반환
+            // $("li").prevAll().css("color","red");
+            // $("li").prevAll(".selected").css("font-size","30px");
+
+            // 마. $(selector1).siblings() ==> 1차 필터링 후 바로 앞/뒤 형제들 반환
+            // 마. $(selector1).siblings(selector2) ==> 1차 필터링 후 selector2와 일치하는 바로 앞/뒤 형제들 반환
+            // $("li").siblings().css("color","red");
+            // $("li").siblings(".selected").css("font-size","30px");
+            
+        });
+        
+    </script>
+</head>
+<body>
+  <ul>
+    <li>A</li>
+    <li class="selected">B</li>
+    <li>C</li>
+    <li class="xxx">D</li>
+    <li>E</li>
+    </ul>
+</body>
+</html>

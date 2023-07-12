@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- CDN방식 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script>
+
+        
+        //DOM Tree가 모두 완료된 후 호출
+        $(document).ready(function(){
+            
+            $("#append").on("click",function(){
+                $("#result").append("<h1>홍길동</h1>")
+            });
+            $("#prepend").on("click",function(){
+                $("#result").prepend("<h1>홍길동</h1>")
+            });
+            $("#before").on("click",function(){
+                $("#result").before("<h1>홍길동</h1>")
+            });
+            $("#after").on("click",function(){
+                $("#result").after("<h1>홍길동</h1>")
+            });
+            $("#replaceWith").on("click",function(){
+                $("#result").replaceWith("<h1>홍길동</h1>")      // 기준 태그를 설정값으로 치환
+            });
+            $("#remove").on("click",function(){
+                $("#result").remove()                           // 기준 태그 삭제
+            });
+            $("#empty").on("click",function(){
+                $("#result").empty()                            // 하위 요소(자식) 삭제
+            });
+        });
+        
+    </script>
+</head>
+<body>
+   <div id="result">
+    <p>Hello</p>
+   </div>
+
+   <button id="append">append</button><br>
+   <button id="prepend">prepend</button><br>
+   <button id="before">before</button><br>
+   <button id="after">after</button><br>
+   <button id="replaceWith">replaceWith</button><br>
+   <button id="remove">remove</button><br>
+   <button id="empty">empty</button><br>
+   <hr/>
+</body>
+</html>
