@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- CDN방식 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script>
+
+        
+        //DOM Tree가 모두 완료된 후 호출
+        
+        $(document).ready(function(){
+            
+            // ok2를 클릭하면 ok가 반응하도록
+            $("#ok").on("click",function(){
+                console.log("ok");
+            });
+            
+            
+            $("#ok2").on("click",function(){
+                $("#ok").trigger("click")
+            });
+
+        });
+        
+    </script>
+</head>
+<body>
+    <button id="ok">ok</button><br>
+    <button id="ok2">ok2</button><br>
+    
+    
+</body>
+</html>
